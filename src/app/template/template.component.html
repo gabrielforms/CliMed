@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-blue bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/images/CliLogo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      CliMed
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a [routerLink]="['home/especialistas']" class="nav-link">Especialistas</a>
+        <a [routerLink]="['home/clinicas']" class="nav-link">Clinicas</a>
+        <a [routerLink]="['home/medicos']" class="nav-link">Medicos</a>
+        <a [routerLink]="['home/marcacao']" class="nav-link">Marcação de consulta</a>
+        <a [routerLink]="['home/paciente']" class="nav-link">Paciente</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
+

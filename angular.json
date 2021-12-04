@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ClinMed": {
+    "CliMed": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ClinMed",
+            "outputPath": "dist/CliMed",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,9 +30,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "node_modules/jquery/dist/jquery.min.js"
+                        ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/@popperjs/core/dist/umd/popper.js",
+              "src/assets/bootstrap/js/bootstrap.bundle.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ClinMed:build:production"
+              "browserTarget": "CliMed:build:production"
             },
             "development": {
-              "browserTarget": "ClinMed:build:development"
+              "browserTarget": "CliMed:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ClinMed:build"
+            "browserTarget": "CliMed:build"
           }
         },
         "test": {
@@ -94,7 +105,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+
             ],
             "scripts": []
           }
@@ -102,5 +114,5 @@
       }
     }
   },
-  "defaultProject": "ClinMed"
+  "defaultProject": "CliMed"
 }

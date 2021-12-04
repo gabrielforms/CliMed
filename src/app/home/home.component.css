@@ -1,0 +1,40 @@
+.home-area {
+  background-image: url("../../assets/images/clin_image.jpg");
+  height: 100vh;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo{
+  flex-direction: column;
+  background-color: grey;
+  border-radius: 30px 30px 30px 30px;
+  padding: 50px;
+}
+
+
+.botao{
+  color: #ffffff;
+  background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  opacity: 0.8;
+  border-radius: 30px;
+  height: 60px;
+  width: 150px;
+  border: none;
+}
+
+button:hover {
+ opacity: 1;
+}
+
+.fa-clinic-medical{
+  color: #20B2AA;
+}
+
+p{
+  font-size: 15px;
+}
