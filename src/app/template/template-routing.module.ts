@@ -10,7 +10,10 @@ const TEMPLATE_ROUTES: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./../clinicas/clinicas.module').then(m => m.ClinicasModule)
-
+      },
+      {
+        path: 'home',
+        loadChildren: () => import('./../medicos/medicos.module').then(m => m.MedicosModule)
       }
     ]
   }
