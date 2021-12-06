@@ -7,22 +7,17 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { TemplateComponent } from './template/template.component';
 import { TemplateModule } from './template/template.module';
-import { ClinicasComponent } from './clinicas/clinicas.component';
-import { ClinicasModule } from './clinicas/clinicas.module';
 import { MedicosComponent } from './medicos/medicos.component';
 import { MedicosModule } from './medicos/medicos.module';
-import { MarcacaoComponent } from './marcacao/marcacao.component';
-import { MarcacaoModule } from './marcacao/marcacao.module';
-import { PacientesComponent } from './pacientes/pacientes.component';
-import { PacientesModule } from './pacientes/pacientes.module';
+import { EspecialidadesComponent } from './especialidades/especialidades.component';
+import { EspecialidadesModule } from './especialidades/especialidades.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClinicasComponent,
     MedicosComponent,
-    MarcacaoComponent,
-    PacientesComponent,
+    EspecialidadesComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,10 +25,8 @@ import { PacientesModule } from './pacientes/pacientes.module';
     RouterModule,
     AppRoutingModule,
     HomeModule,
-    ClinicasModule,
     MedicosModule,
-    MarcacaoModule,
-    PacientesModule,
+    EspecialidadesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
