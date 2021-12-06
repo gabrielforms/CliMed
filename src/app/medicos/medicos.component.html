@@ -1,80 +1,5 @@
 <div class="container">
   <div class="row">
-    <div class="d-flex p-0 mb-4 pesquisar">
-      <div class="col-9">
-          <input  type="text" class="form-control" placeholder="Pesquisar">
-      </div>
-      <div class="col-3 end-right">
-          <button class="btn_colaborador" data-bs-toggle="modal" data-bs-target="#modalRamal">Adicionar</button>
-      </div>
-  </div>
-
-  <!-- Modal de adição de novo ramal -->
-
-  <div class="modal fade" id="modalRamal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-          <div class="modal-header" style="padding: 12px;">
-            <label><h1>Adicionar ramal</h1></label>
-      </div>
-      <div class="modal-body">
-
-            <div class="container-fluid" >
-                <form autocomplete="off">
-                    <div class="row" id="form-titulo">
-
-                        <div class="form-group col-12">
-                            <label for="nomeTitulo">Setor</label>
-                            <input  type="text"
-                                    class="form-control"
-                                    id="nomeSetor"
-                                    name="nomeSetor"
-                                    placeholder="Nome">
-                        </div>
-
-                        <div class="form-group col-12">
-                          <label for="nomeTitulo">Responsável (opcional)</label>
-                          <input  type="text"
-                                  class="form-control"
-                                  id="nomeResponsavel"
-                                  name="nomeResponsavel"
-                                  placeholder="Nome">
-                      </div>
-
-                      <div class="form-group col-12">
-                        <label for="nomeTitulo">Ramal</label>
-                        <input  type="text"
-                                class="form-control"
-                                id="nomeRamal"
-                                name="nomeRamal"
-                                placeholder="Nome">
-                    </div>
-
-                        <div class="form-group col-6">
-                            <label>Local</label>
-                            <select class="form-select">
-                              <option selected>Selecione</option>
-                              <option value="1">Vectra Sede</option>
-                              <option value="2">Pe conectado</option>
-                            </select>
-                        </div>
-
-
-
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-outline-secondary" style="border-radius: 30px; height: 40px;
-            padding: 0 25px;" #closedModal data-bs-dismiss="modal" >Cancelar</button>
-            <button class="btn_colaborador" type="submit">Salvar</button>
-        </div>
-      </div>
-  </div>
-</div>
-
-
       <table class="table table-striped">
           <thead>
               <tr class="text-white" style="background-color: blue">
@@ -104,3 +29,40 @@
       </table>
   </div>
 </div>
+<form>
+  <div class="form-group col-md-6">
+    <label for="inputAddress">Nome</label>
+    <input type="text" class="form-control" placeholder="Carlos">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputState">Genero</label>
+    <select id="inputState" class="form-control">
+      <option selected>Escolha</option>
+      <option>M</option>
+      <option>F</option>
+    </select>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Telefone</label>
+      <input type="number" class="form-control">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control">
+    </div>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputState">Especialidade</label>
+    <select id="inputState" class="form-control">
+      <option selected>Escolha</option>
+      <option>Clínico Geral</option>
+      <option>Pediatria</option>
+      <option>Odontologista</option>
+      <option>dermatologista</option>
+      <option>Psicologista</option>
+      <option>Psiquiatria</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Adicionar</button>
+</form>

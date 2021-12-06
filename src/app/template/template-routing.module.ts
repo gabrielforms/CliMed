@@ -14,6 +14,10 @@ const TEMPLATE_ROUTES: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./../medicos/medicos.module').then(m => m.MedicosModule)
+      },
+      {
+        path: 'home',
+        loadChildren: () => import('./../pacientes/pacientes.module').then(m => m.PacientesModule)
       }
     ]
   }
