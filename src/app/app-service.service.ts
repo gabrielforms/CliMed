@@ -9,6 +9,6 @@ export class AppServiceService {
   constructor(private http: HttpClient) { }
 
   listAllDoctors(){
-    return this.http.(/api/ListAllDoctors)
+    return this.http.get('/api/doctor')
   }
 }

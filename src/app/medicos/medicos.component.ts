@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppServiceService } from '../app-service.service';
 
 @Component({
   selector: 'app-medicos',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: AppServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getDoctorsFromAPI();
   }
+
+  getDoctorsFromAPI(){
+    this.service.listAllDoctors().subscribe((Response) => {
+      console.log('Reponse from API is ', Response)
+    }, (error) => {
+      console.log('Error is ', error);
+    }
+    )
+  }
+
+
 
 }
