@@ -2,7 +2,7 @@
   <div class="row">
       <table class="table table-striped">
           <thead>
-              <tr class="text-white" style="background-color: blue">
+              <tr class="text-white" style="background-color: blue"  >
                   <th scope="col">Código do medico</th>
                   <th scope="col">Nome</th>
                   <th scope="col">Genero</th>
@@ -13,13 +13,13 @@
               </tr>
           </thead>
           <tbody>
-              <tr>
-                  <td>2001</td>
-                  <td>Arlindo</td>
-                  <td>M</td>
-                  <td>81995078534</td>
-                  <td>arlindomorais@gmail.com</td>
-                  <td>0001</td>
+             <tr *ngFor="let item of dados">
+                  <td>{{item.CodMed}}</td>
+                  <td>{{item.NomeMed}}</td>
+                  <td>{{item.Genero}}</td>
+                  <td>{{item.Telefone}}</td>
+                  <td>{{item.Email}}</td>
+                  <td>{{item.CodEspec}}</td>
                   <td>
                       <i class="fas fa-pencil-alt" style="margin-right: 25px;"></i>
                       <i class="fas fa-trash" style="margin-right: 15px;"></i>
@@ -29,14 +29,16 @@
       </table>
   </div>
 </div>
-<form>
+<form #doctorForm="ngForm" (ngSubmit)="getForm(doctorForm.value)">
   <div class="form-group col-md-6">
-    <label for="inputAddress">Nome</label>
-    <input type="text" class="form-control" placeholder="Carlos">
+    <label for="CodMed">Código do Médico</label>
+    <input type="text" class="form-control" placeholder="Código" ngModel name="CodMed">
+    <label for="NomeMed">Nome do Medico</label>
+    <input type="text" class="form-control" placeholder="Nome do Médico" ngModel name="NomeMed">
   </div>
   <div class="form-group col-md-6">
-    <label for="inputState">Genero</label>
-    <select id="inputState" class="form-control">
+    <label for="Genero">Genero</label>
+    <select id="inputState" class="form-control" ngModel name="Genero">
       <option selected>Escolha</option>
       <option>M</option>
       <option>F</option>
@@ -44,25 +46,17 @@
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">Telefone</label>
-      <input type="number" class="form-control">
+      <label for="Telefone">Telefone</label>
+      <input type="number" class="form-control" ngModel name="Telefone">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control">
+      <label for="Email">Email</label>
+      <input type="email" class="form-control" ngModel name="Email">
     </div>
   </div>
   <div class="form-group col-md-6">
-    <label for="inputState">Especialidade</label>
-    <select id="inputState" class="form-control">
-      <option selected>Escolha</option>
-      <option>Clínico Geral</option>
-      <option>Pediatria</option>
-      <option>Odontologista</option>
-      <option>dermatologista</option>
-      <option>Psicologista</option>
-      <option>Psiquiatria</option>
-    </select>
+    <label for="CodEspec">Especialidade</label>
+    <input type="number" class="form-control" ngModel name="CodEspec">
   </div>
   <button type="submit" class="btn btn-primary">Adicionar</button>
 </form>
