@@ -10,27 +10,31 @@
               </tr>
           </thead>
           <tbody>
-              <tr>
-                  <td>2001</td>
-                  <td>Clinico geral</td>
-                  <td>atende tudo</td>
-                  <td>
-                      <i class="fas fa-pencil-alt" style="margin-right: 25px;"></i>
-                      <i class="fas fa-trash" style="margin-right: 15px;"></i>
-                  </td>
-              </tr>
+            <tr *ngFor="let item of dados">
+              <td>{{item.CodEspec}}</td>
+              <td>{{item.NomeEspec}}</td>
+              <td>{{item.Descricao}}</td>
+              <td>
+                  <i class="fas fa-pencil-alt" style="margin-right: 25px;"></i>
+                  <i class="fas fa-trash" style="margin-right: 15px;"></i>
+              </td>
+          </tr>
           </tbody>
       </table>
   </div>
 </div>
-<form>
+<form (ngSubmit) ="getForm(specialtyForm.value)" #specialtyForm="ngForm">
   <div class="form-group col-md-6">
-    <label for="inputAddress">Nome</label>
-    <input type="text" class="form-control" placeholder="Carlos">
+    <label for="CodEspec">CodEspec</label>
+    <input type="text" class="form-control" placeholder="Codigo" ngModel name="CodEspec">
   </div>
   <div class="form-group col-md-6">
-    <label for="inputAddress">Descrição</label>
-    <input type="text" class="form-control" placeholder="Carlos">
+    <label for="NomeEspec">Especialidade</label>
+    <input type="text" class="form-control" placeholder="Especialidade" ngModel name="NomeEspec">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="Descricao">Descrição</label>
+    <input type="text" class="form-control" placeholder="Descricao" ngModel name="Descricao">
   </div>
   <button type="submit" class="btn btn-primary">Adicionar</button>
 </form>

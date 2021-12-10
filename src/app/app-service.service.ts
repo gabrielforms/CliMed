@@ -9,6 +9,20 @@ export class AppServiceService {
   constructor(private http: HttpClient) { }
 
   listAllDoctors(){
-    return this.http.(/api/ListAllDoctors)
+     return this.http.get('/api/doctor');
   }
+
+  listAllSpecialties(){
+    return this.http.get('/api/specialty');
+  }
+
+  createSpecialty(form:any){
+    return this.http.post('/api/specialty', form);
+  }
+
+  createDoctor(form:any){
+    return this.http.post('/api/doctor', form);
+  }
+
+
 }
