@@ -11,6 +11,7 @@ import { MedicosComponent } from './medicos/medicos.component';
 import { MedicosModule } from './medicos/medicos.module';
 import { EspecialidadesComponent } from './especialidades/especialidades.component';
 import { EspecialidadesModule } from './especialidades/especialidades.module';
+import { BySpecialtyModule } from './byspecialty/byspecialty.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
@@ -27,6 +28,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
     HomeModule,
     MedicosModule,
     EspecialidadesModule,
+    BySpecialtyModule,
     FormsModule,
     ReactiveFormsModule
 
