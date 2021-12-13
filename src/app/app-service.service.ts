@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { escapeIdentifier } from '@angular/compiler/src/output/abstract_emitter';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +24,11 @@ export class AppServiceService {
 
   createDoctor(form:any){
     return this.http.post('/api/doctor', form);
+  }
+
+  clinicBySpecialty(espec:any){
+    espec = espec.toString();
+    return this.http.get(`/api/clinics/${espec}`);
   }
 
 

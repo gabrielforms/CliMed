@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+      <table class="table table-striped">
+          <thead>
+              <tr class="text-white" style="background-color: blue">
+                  <th scope="col">Clinica</th>
+                  <th scope="col">Endereço</th>
+                  <th scope="col">Telefone</th>
+                  <th scope="col">Email</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of dados">
+              <td>{{item.NomeCli}}</td>
+              <td>{{item.Endreco}}</td>
+              <td>{{item.Telefone}}</td>
+              <td>{{item.Email}}</td>
+              <td>
+                  <i class="fas fa-pencil-alt" style="margin-right: 25px;"></i>
+                  <i class="fas fa-trash" style="margin-right: 15px;"></i>
+              </td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+<form #specialtyForm ngForm (ngSubmit)="getForm(specialtyForm.NomeEspec)" >
+  <div class="form-group col-md-6">
+    <label for="CodEspec">Especialidade</label>
+    <input type="text" class="form-control" placeholder="Especialidade" ngModel name="NomeEspec">
+  </div>
+  <button type="submit" class="btn btn-primary">Procurar</button>
+</form>
